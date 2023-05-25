@@ -6,7 +6,7 @@ int c(int n,int r){
         return 1;
     }
     else{
-    // clalling the funtion iterativally with reduced n adn r;
+    // calling the funtion iterativally with reduced n adn r;
         return c(n-1,r-1)+c(n-1,r);
     }
 }
