@@ -1,32 +1,18 @@
-# Prerequisites
-*.d
+#include <iostream>
+using namespace std;
+// creating a funtion for calculating the value of n_c_r;
+int c(int n,int r){
+    if(r==0 || n==r){
+        return 1;
+    }
+    else{
+    // clalling the funtion iterativally with reduced n adn r;
+        return c(n-1,r-1)+c(n-1,r);
+    }
+}
+int main() {
+    // Write C++ code here
+    cout<<c(10,3);
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+    return 0;
+}
